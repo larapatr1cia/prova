@@ -1,19 +1,26 @@
-<!-- DOCTYPE é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo. Essa declaração vem antes das tags HTML, portanto, geralmente é apresentada na primeira linha de um código. Hoje em dia, todos os navegadores suportam a versão mais nova do HTML-->
+<!-- DOCTYPE é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+<!-- A seção, elemento, componente HEAD é um container para "meta data" (dados referentes à dados) e não é exibida diretamente na tela do usuário. Neste local, cabem nformações como os CSSs usados nesta página e/ou quais JavaScrips devem ser importados para o funcionamento desta página-->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">  <!--Essa tag serve para que os navegadores saibam como devem renderizar os textos incluídos em uma página específica-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Essa configurar pode redenrizar a página para ser renderizada como em outra versão do Internet Explorer. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação</title>
-    <link rel="stylesheet" href="prova.css">
+    <title>Avaliação</title> <!--Titulo do Site-->
+    <link rel="stylesheet" href="prova.css"> <!--Link para o CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
+<!--A tag body é definir o corpo do documento -->
 <body>
 
+<!-- O elemento MAIN define o conteúdo principal dentro do BODY em seu documento ou aplicação.-->
     <main>
+<!-- DIV é utilizado para agrupar elementos para fins de estilos (usando class ou id)-->
+
+<!--Class é uma maneira de identificar um grupo de elementos  
+    Id é um identificador único para um elemento-->
         <div id="moviePoster">
             <div class="omdbrating">
                 <span id="icone"><i class="fa-solid fa-star"></i></span>
@@ -23,7 +30,7 @@
         </div>
 
         <div class="description">
-
+<!--O FORM submete os dados de entrada do usuário a um programa que se encarregará do processamento desses dados, de acordo com o interesse do criador do documento -->
             <form id="formSearch" action="">
                 <input id="title" type="text" placeholder="Informe o título do filme">
                 <input type="submit" value="Pesquisar">
@@ -35,6 +42,7 @@
                 <p><span class="infoBlue" id="movieYear">ANO</span> <span id="movieGenre">GENERO DO FILME</span> <span
                         class="infoBlue" id="movieRuntime">DURAÇÃO</span></p>
                 <p id="movieInfo">Descrição do filme.</p>
+<!--STRONG mostra a letra em negrito-->
                 <p><strong>Escrito por:</strong> <span id="movieWriter">Nome do escritor</span> </p>
                 <p><strong>Dirigido por:</strong> <span id="movieDirector">Nome do ditetor</span></p>
             </div>
@@ -42,7 +50,7 @@
             
         </div>
     </main>
-
+<!-- SCRIPT usado para incluir ou referenciar um script executável -->
     <script src="prova.js"></script>
 </body>
 
