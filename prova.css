@@ -1,6 +1,11 @@
 /* importando a fonte Roboto do google fonts */
+/* @import é o mecanismo CSS para incluir uma folha de estilos*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
 
+/* (*) pode ser usado para selecionar todo e qualquer tipo de elemento em uma página HTML
+ margin define a área de margem nos quatro lados do elemento 
+ padding define uma a distância entre o conteúdo de um elemento e suas bordas
+ box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras e alturas dos elementos.*/
 
 * {
     margin: 0;
@@ -9,13 +14,13 @@
 }
 
 main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    color: #CAB9B9;
-    position: fixed;
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
+    width: 100%; /*determina a largura da área de conteúdo de um elemento*/
+    height: 100vh; /*destinam a definir a altura dos boxes*/
+    display: flex; /*é utilizada para indicar a forma como os elementos HTML serão dispostos na página ou em espaços delimitados */
+    color: #CAB9B9; /*definine o valor da cor de um elemento*/
+    position: fixed; /*é uma propriedade utilizada para determinar o posicionamento dos elementos na página.*/
+    font-family: 'Roboto', sans-serif; /*Determina a fonte da letra*/
+    font-size: 28px; /*Determina o tamanho da letra*/
 }
 
 #moviePoster {
@@ -23,11 +28,10 @@ main {
     height: 100%;
     /* background: url(filme.png) no-repeat center; */
     /* background-size: cover; */
-    position: relative;
-
-    background-image: url(filme.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative; /*posiciona o elemento em relação a si mesmo*/
+    background-image: url(filme.png); /*é utilizada para inserir uma ou mais imagens ao fundo do elemento.*/
+    background-repeat: no-repeat; /* a imagem é inserida apenas uma vez no plano de fundo.*/
+    background-position: center; 
     background-size: cover;
 }
 
