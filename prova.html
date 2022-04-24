@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+    <link rel="stylesheet" href="avaliacao.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="moviePoster">
+            <div class="omdbrating">
+                <span id="icone"><i class="fa-solid fa-star"></i></span>
+
+                <span id="imdbRating">Score</span>
+            </div>
+        </div>
+
+        <div class="description">
+
+            <form id="formSearch" action="">
+                <input id="title" type="text" placeholder="Informe o título do filme">
+                <input type="submit" value="Pesquisar">
+            </form>
+            <div id="descriptionBodyNotFound">
+            </div>
+            <div id="descriptionBody">
+                <h1 id="movieTitle">Titulo do filme</h1>
+                <p><span class="infoBlue" id="movieYear">ANO</span> <span id="movieGenre">GENERO DO FILME</span> <span
+                        class="infoBlue" id="movieRuntime">DURAÇÃO</span></p>
+                <p id="movieInfo">Descrição do filme.</p>
+                <p><strong>Escrito por:</strong> <span id="movieWriter">Nome do escritor</span> </p>
+                <p><strong>Dirigido por:</strong> <span id="movieDirector">Nome do ditetor</span></p>
+            </div>
+
+            
+        </div>
+    </main>
+
+    <script src="avaliacao.js"></script>
+</body>
+
+</html>
