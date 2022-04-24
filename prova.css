@@ -2,15 +2,12 @@
 /* @import é o mecanismo CSS para incluir uma folha de estilos*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap');
 
-/* (*) pode ser usado para selecionar todo e qualquer tipo de elemento em uma página HTML
- margin define a área de margem nos quatro lados do elemento 
- padding define uma a distância entre o conteúdo de um elemento e suas bordas
- box-sizing é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras e alturas dos elementos.*/
+/* (*) pode ser usado para selecionar todo e qualquer tipo de elemento em uma página HTML*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /*define a área de margem nos quatro lados do elemento*/
+    padding: 0; /*define uma a distância entre o conteúdo de um elemento e suas bordas*/
+    box-sizing: border-box; /*é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras e alturas dos elementos*/
 }
 
 main {
@@ -31,16 +28,16 @@ main {
     position: relative; /*posiciona o elemento em relação a si mesmo*/
     background-image: url(filme.png); /*é utilizada para inserir uma ou mais imagens ao fundo do elemento.*/
     background-repeat: no-repeat; /* a imagem é inserida apenas uma vez no plano de fundo.*/
-    background-position: center; 
-    background-size: cover;
+    background-position: center; /*Centraliza a imagem*/
+    background-size: cover; /*Redimensione a imagem de fundo para cobrir todo o container, mesmo que tenha que esticar a imagem ou cortar um pouco de uma das bordas*/
 }
-
+/*usada em conjunto com propriedades auxiliares, entre elas: bottom, top, left e right, que ajudam a definir de que forma o elemento será posicionado na tela.*/
 .omdbrating {
     position: absolute;
     width: 315.47px;
     height: 70.49px;
     
-    left: -90px;
+    left: -90px; /**/
     bottom: 0;
 
     padding-left: 90px;
@@ -66,13 +63,13 @@ main {
     box-shadow: inset 0px 0px 120px #090808;
     padding: 60px 50px;
     
-    z-index: 2;
+    z-index: 2; /*especifica a ordem da pilha de um elemento do anúncio*/
 }
 
 #movieTitle {
     color: #D6D6D6;
     font-size: 38px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /*define a margin area na parte inferior de um elemento*/
 }
 
 #movieInfo {
@@ -85,7 +82,7 @@ main {
 
 .infoBlue {
     color: #217C8F;
-    font-weight: bold;
+    font-weight: bold; /*especifica o peso ou a intensidade da fonte */
 }
 
 #movieGenre{
@@ -104,13 +101,13 @@ main {
     color:  #F4F4F4;
     font-size: 22px;
     border: 4px solid #217C8F;
-    border-radius: 10px;
-    margin-right: 10px;
+    border-radius: 10px; /*definir bordas arredondadas*/
+    margin-right: 10px; 
 }
 
-#formSearch input[type='text']:focus{
-    outline: none;
-    border: 4px solid #F4F4F4;
+#formSearch input[type='text']:focus{ /*usado para dar foco em campos input´s: texto (type: text), botão(type: button), radio(type:radio) e outros elementos, como janela(window), ancoras(a href), etc*/
+    outline: none; /*é a estrutura do documento que é gerada pelos títulos, títulos de formulários, títulos das tabelas*/
+    border: 4px solid #F4F4F4; /*Tamanho da borda*/
 }
 
 #formSearch input[type='submit'] {
@@ -121,7 +118,7 @@ main {
     border: none;
     font-size: 22px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 10px; /*um elemento indica o espaço acima do elemento*/
 }
 
 
@@ -130,7 +127,7 @@ main {
 #formSearch input[type='submit']:hover {
     background-color: #F4F4F4;
     color:    #217C8F;
-    transition: 0.3s;
+    transition: 0.3s; /*curso para a criação de efeitos de animação nos elementos */
 }
 
 
@@ -139,11 +136,11 @@ main {
 
 /* responsivo para celular */
 
-@media (max-width: 700px) {
+@media (max-width: 700px) { /* determinar um estilo CSS para cada tipo de mídia que te interessar. */
 
     main {
         position: static;
-        display: block;
+        display: block; /*faz com que o elemento HTML seja renderizado como bloco*/
         font-size: 18px;
         /* height: 100%; */
     }
@@ -160,11 +157,11 @@ main {
     .description {
         width: 100%;
         position: relative;
-        z-index: 3;
+        z-index: 3; /*especifica a ordem da pilha de um elemento do anúncio.*/
         padding: 8%;
     }
 
-    #formSearch input[type='text'], #formSearch input[type='submit'] {
+    #formSearch input[type='text'], #formSearch input[type='submit'] { /* usado para criar controles interativos para formulários baseados na web para receber dados do usuário*/
         font-size: 18px;
         width: 100%;
     }
