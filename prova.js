@@ -5,20 +5,11 @@ function getMovieInfosOMDB(title){
     .then(response => response.json()) /*O json()método da Responseinterface recebe um Responsefluxo e o lê até a conclusão. Ele retorna uma promessa que resolve com o resultado da análise do corpo do texto como JSON.*/
     .then(data => {
 
-        if(data.Response == 'False'){ /* Se data.Response for falso, não vai exibir as informações a seguir*/
+        if(data.Response == 'False'){
             descriptionBodyNotFound.textContent = "Filme não encontrado! Tente novamente.";
             descriptionBodyNotFound.style.marginBottom = '30px'
-            movieTitle.textContent = "Titulo do filme"
-            movieYear.textContent = "Ano"
-            movieGenre.textContent = "Genero"
-            movieRuntime.textContent = "Duração"
-            imdbRating.textContent = "Score"
-            movieInfo.textContent = "Descrição do filme."
             descriptionBody.style.display = "none"
-            movieWriter.textContent = "Nome do escritor"
-            movieDirector.textContent = "Nome do Diretor"
-            moviePoster.style.backgroundImage = `url(filmeNaoEncontrado.png)`
-
+            
         } else { /*Se não, vai exibir as informações do filme como titulo, genero, diretor etc */
             descriptionBodyNotFound.textContent = "";
             
