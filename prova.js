@@ -1,6 +1,6 @@
 function getMovieInfosOMDB(title){
-    const url = `https://www.omdbapi.com/?t=${title}&apikey=790af7bc`  /*é uma rotina, normalmente escrita com a linguagem T-SQL, que executa uma ação (como um cálculo complexo) e retorna o resultado dessa ação como um valor */
-       
+    const url = `https://www.omdbapi.com/?t=${title}&apikey=790af7bc`
+    let descriptionBody = document.querySelector("#descriptionBody")
     fetch(url) /*fornece uma maneira fácil e lógica para buscar recursos de forma assíncrona através da rede*/
     .then(response => response.json()) /*O json()método da Responseinterface recebe um Responsefluxo e o lê até a conclusão. Ele retorna uma promessa que resolve com o resultado da análise do corpo do texto como JSON.*/
     .then(data => {
@@ -14,6 +14,7 @@ function getMovieInfosOMDB(title){
             movieRuntime.textContent = "Duração"
             imdbRating.textContent = "Score"
             movieInfo.textContent = "Descrição do filme."
+            descriptionBody.style.display = "none"
             movieWriter.textContent = "Nome do escritor"
             movieDirector.textContent = "Nome do Diretor"
             moviePoster.style.backgroundImage = `url(filmeNaoEncontrado.png)`
