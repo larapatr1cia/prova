@@ -1,5 +1,5 @@
 function getMovieInfosOMDB(title){
-    const url = `http://www.omdbapi.com/?t=${title}&apikey=790af7bc`  
+    const url = `https://www.omdbapi.com/?t=${title}&apikey=790af7bc`  
        
     fetch(url)
     .then(response => response.json())
