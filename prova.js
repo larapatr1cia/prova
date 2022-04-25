@@ -8,7 +8,7 @@ function getMovieInfosOMDB(title){
         if(data.Response == 'False'){
             descriptionBodyNotFound.textContent = "Filme não encontrado! Tente novamente.";
             descriptionBodyNotFound.style.marginBottom = '30px'
-            descriptionBody.style.display = "none"} 
+            descriptionBody.style.display = "none"
             moviePoster.style.backgroundImage = `url(filmeNaoEncontrado.png)`
         
         else { /*Se não, vai exibir as informações do filme como titulo, genero, diretor etc */
