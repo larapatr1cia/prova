@@ -11,7 +11,7 @@ function getMovieInfosOMDB(title){
             descriptionBody.style.display = "none"
             moviePoster.style.backgroundImage = `url(filmeNaoEncontrado.png)`
         
-        else { /*Se não, vai exibir as informações do filme como titulo, genero, diretor etc */
+        } else { /*Se não, vai exibir as informações do filme como titulo, genero, diretor etc */
             descriptionBodyNotFound.textContent = "";
             
             movieTitle.textContent = data.Title
